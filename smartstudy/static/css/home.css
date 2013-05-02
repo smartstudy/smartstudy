@@ -63,6 +63,15 @@
 	font-size: 1.125em;
 }
 
+#navigation li a {
+    color: #d7dadd;
+    font-weight: bold;
+}
+
+#navigation li.active a {
+    color: #1c2447;
+}
+
 #navigation li:first-child img {
 	height: 40px;
 }
@@ -87,8 +96,8 @@ section h1 {
 footer {
     background-color: #16202a;
     -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5); 
-     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 footer section a { color: inherit; }
@@ -101,8 +110,8 @@ footer section {
     background-color: #26303a;
     color: #d7dadd;
     -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5); 
-     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
 
     font-size: 11px;
 }
