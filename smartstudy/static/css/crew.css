@@ -1,60 +1,86 @@
 @charset "UTF-8";
 
 div.crew_first {
-    background-image:url('/static/images/home/talk_bubble.png');
-    background-repeat:no-repeat;
-    background-position: 208px 0;
-    position:relative;
-    overflow:hidden;
-    width:826px;
-    margin:20px auto;
+    position : relative;
+    overflow: hidden;
+    width: 826px;
+    margin: 20px auto;
+    position: relative;
 }
 
 div.crew_first img {
     width: 178px;
-    height:178px;
-    border-radius:89px;
-    float:left;
+    height: 178px;
+    border-radius: 89px;
+    float: left;
 }
+
 div.crew_first .comment {
     display:block;
-    border-radius:16px;
+    border-radius : 16px;
     background-color: #e6eaee;
-    position:absolute;
-    left:238px;
-    height:132px;
-    width:500px;
+    position: absolute;
+    left: 208px;
+    height: 114px;
+    width: 600px;
+    border-radius: 16px;
 }
-div.crew_first strong{
-    display:block;
-    margin:20px;
+
+div.crew_first .comment:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    pointer-events: none;
 }
+
+div.crew_first .comment:after {
+    border-color: rgba(230, 234, 238, 0);
+    border-right-color: #e6eaee;
+    border-width: 10px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+div.crew_first strong {
+    display: block;
+    font-weight: 900;
+    font-size: 25px;
+    line-height:30px;
+    margin: 10px 30px 0px 30px;
+}
+
 div.crew_first span {
-    margin:0 20px;
+    display: table-cell;
+    vertical-align: middle;
+    height:60px;
+    padding:0 30px;
+    font-size: 18px;
 }
 
 ul.crew {
-    clear:both;
-    margin:0 auto;
-    width:826px;
-    overflow:hidden;
+    clear: both;
+    margin: 0 auto;
+    width: 826px;
+    overflow: hidden;
 }
 
 ul.crew li {
     display: block;
-    margin-right:30px;
-    margin-bottom:20px;
-    float:left;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
 }
 
 ul.crew li img {
     width: 88px;
     height: 88px;
-    border-radius:44px;
-    display:block;
-    
+    border-radius: 44px;
+    display: block;
 }
 
 ul.crew li strong,ul.crew li span {
-    display:none;
+    display: none;
 }
