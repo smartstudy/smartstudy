@@ -32,8 +32,9 @@
 
 #navigation ul {
 	overflow: hidden;
-	max-width: 80%;
-	padding: 1% 2%;
+    width:90%;
+    max-width: 960px;
+	padding: 5px 2%;
 	margin: 0 auto;
 }
 
@@ -44,8 +45,9 @@
 	text-align: center;
 }
 
-.container > section {
-    max-width: 80%;
+section {
+    width:90%;
+    max-width: 960px;
     padding: 5% 2%;
     margin: 0 auto;
     background-color: white;
@@ -63,10 +65,8 @@ footer a { color: inherit; }
 footer a:link { color: inherit; }
 footer a:visited { color: inherit; }
 
-footer .container {
-    max-width: 80%;
+footer section {
     padding: 2% 2% 5%;
-    margin: 0 auto;
     background-color: #26303a;
     color: #d7dadd;
 }
