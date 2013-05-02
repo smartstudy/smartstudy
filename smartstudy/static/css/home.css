@@ -44,13 +44,14 @@
 	text-align: center;
 }
 
-section {
+.container > section {
     max-width: 80%;
     padding: 5% 2%;
     margin: 0 auto;
+    background-color: white;
 }
 
-section:nth-child(2n+1) {
+.container > section:nth-child(2n+1) {
     background-color: #ddd;
 }
 
