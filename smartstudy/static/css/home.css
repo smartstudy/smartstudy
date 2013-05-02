@@ -4,6 +4,24 @@
 	width: 100%;
 }
 
+.container > header {
+  padding: 1px 0;
+  background: #26303a url("../images/header/pattern.png") center repeat;
+  background-size: auto, cover;
+  color: white;
+}
+
+.container > header > * {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 50px;
+  text-transform: uppercase;
+}
+.container > header > *:first-child { margin-top: 100px; }
+.container > header > *:last-child  { margin-bottom: 200px; }
+.container > header > h1 { font-size: 250%; }
+.container > header > p  { font-size: 200%; }
+
 #navigation {
 	position: relative;
 	width: 100%;
