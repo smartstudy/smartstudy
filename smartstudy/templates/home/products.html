@@ -1,1 +1,11 @@
+{% load webdesign %}
+
 <h1>제품</h1>
+<ul class="products">
+{% for product in products %}
+  <li>
+    <a><img src="{{ product.icon }}"></a>
+    <p class="description">{% lorem 5 w random %}</p>
+  </li>
+{% endfor %}
+</ul>
