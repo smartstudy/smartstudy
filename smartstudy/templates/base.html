@@ -9,16 +9,18 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"> <!-- for IE10 -->
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"  />
-        
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <!-- css reset -->
+    <link href="{{ STATIC_URL }}css/reset.css" rel="stylesheet">
     <!-- This file store project specific CSS -->
     <link href="{{ STATIC_URL }}css/project.css" rel="stylesheet">
 
-    <!-- Use this to quickly test CSS changes in a template, 
+    <!-- Use this to quickly test CSS changes in a template,
         then move to project.css -->
     {% block extra_css %}{% endblock extra_css %}
   </head>

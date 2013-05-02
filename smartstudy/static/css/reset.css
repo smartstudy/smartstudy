@@ -1,0 +1,66 @@
+/* reset */
+article,aside,footer,header,nav,section {
+  display: block;
+}
+
+a,article,aside,caption,div,dl,dt,footer,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,img,label,li,nav,ol,p,section,span,strong,table,tbody,td,tfoot,th,thead,time,tr,ul, input, button{
+  border:0;
+  margin:0;
+  padding:0;
+  outline:0;
+  font-size:100%;
+  color: inherit;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+    font-family:Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    background: #e6eaee;
+    color: #000;
+}
+
+
+a:link {
+  color:#000;
+  text-decoration:none;
+}
+
+a:visited {
+  color:#000;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#000;
+}
+
+img {
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  vertical-align: top;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  line-height: 20px;
+}
