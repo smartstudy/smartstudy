@@ -30,6 +30,14 @@
 .container > header > h1 { font-size: 250%; }
 .container > header > p  { font-size: 200%; }
 
+@media (max-width: 480px) {
+  .container > header { background-size: auto, 500px; }
+  .container > header > * { padding-left: 25px; }
+  .container > header > *:first-child { margin-top: 50px; }
+  .container > header > *:last-child  { margin-bottom: 50px; }
+  .container > header > p  { font-size: 150%; }
+}
+
 #navigation {
 	position: relative;
 	width: 100%;
