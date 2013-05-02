@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+#crew {background:#fff;}
+
 div.crew_first {
     position : relative;
     overflow: hidden;
@@ -84,17 +86,19 @@ ul.crew li div.comment {
 }
 
 ul.crew li.recruit span {
-    background:#ccc;
+    background:#e6eaee;
     display:table-cell;
     vertical-align: middle;
     text-align: center;
 }
 #recruit {
     display:none;
-    background:#dfdfdf;
+    background:#e6eaee;
     position: relative;
     margin-top:20px;
-}
+    padding:40px;
+    border-radius:16px;
+}  
 
 #recruit:after {
     bottom: 100%;
@@ -108,8 +112,14 @@ ul.crew li.recruit span {
 
 #recruit:after {
     border-color: rgba(230, 234, 238, 0);
-    border-bottom-color: #dfdfdf;
+    border-bottom-color: #e6eaee;
     border-width: 20px;
     left: 50%;
     margin-left: -20px;
 }
+
+#recruit h1 {font-size:25px;margin-bottom:20px;}
+#recruit h2 {font-size:16px;margin-bottom:40px;}
+#recruit p {font-size:15px;margin:10px;}
+#recruit ul {margin:10px 40px;}
+#recruit ul li {list-style-type: disc;font-size:13px;line-height:20px;}
