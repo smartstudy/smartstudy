@@ -1,22 +1,24 @@
 function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
+	var geocoder = new google.maps.Geocoder();
+	var mapOptions = {
+		zoom: 18,
+		center: new google.maps.LatLng(37.4856366, 127.00432139999998),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
 
-  var map = new google.maps.Map(document.getElementById('map'),
-      mapOptions);
+	var map = new google.maps.Map(document.getElementById('map'),
+	  mapOptions);
+
+	var marker = new google.maps.Marker({
+		position: map.getCenter(),
+		map: map,
+		draggable: false
+	});
+
+	var infowindow = new google.maps.InfoWindow({
+		content: '대한민국 서울특별시 서초구 서초동 1516-2'
+	}).open(marker.get('map'), marker);
 }
-
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-      'callback=initialize';
-  document.body.appendChild(script);
-}
-
 
 $(function() {
 	var $navigation = $('#navigation');
@@ -30,12 +32,10 @@ $(function() {
 			});
 		} else {
 			$navigation.css({
-				'top': nav_offset_y + 'px',
-				'position': 'absolute'
+				'position': 'relative'
 			});
 		}
 	}
 
-	$(window).scroll(fixedNavigation);
-	$(window).on('load', loadScript);
+	$(window).on('load', initialize).scroll(fixedNavigation);
 });
