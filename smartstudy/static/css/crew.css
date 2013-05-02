@@ -70,6 +70,7 @@ ul.crew li {
     margin-right: 30px;
     margin-bottom: 20px;
     float: left;
+    cursor: pointer;
 }
 
 ul.crew li img,ul.crew li.recruit span  {
@@ -96,7 +97,7 @@ ul.crew li.recruit span {
     margin-top:20px;
     padding:40px;
     border-radius:16px;
-}  
+}
 
 #recruit:after {
     bottom: 100%;

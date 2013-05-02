@@ -10,5 +10,5 @@ $('ul.crew li.crew').hover(function () {
 random_crew();
 
 $('ul.crew li.recruit').click(function() {
-    $('#recruit').slideDown(1000);
+    $('#recruit').slideToggle(1000);
 });
