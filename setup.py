@@ -12,6 +12,7 @@ requirements = [
     'Django>=1.5',
     'South>=0.7.6',
     'django-compressor',
+    'PIL',
 ]
 
 extras_require = {
