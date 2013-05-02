@@ -188,6 +188,7 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'south',
 )
 
 # Apps specific for this project go here.
