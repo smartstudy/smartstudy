@@ -35,9 +35,19 @@ section:nth-child(2n+1) {
 }
 
 footer {
+    background-color: #16202a;
+}
+
+footer a { color: inherit; }
+footer a:link { color: inherit; }
+footer a:visited { color: inherit; }
+
+footer .container {
     max-width: 960px;
     padding: 2% 2% 5%;
     margin: 0 auto;
+    background-color: #26303a;
+    color: #d7dadd;
 }
 
 footer .social {

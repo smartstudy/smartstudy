@@ -13,12 +13,3 @@ body {
 a {
   color: #26303a;
 }
-
-footer {
-  background-color: #26303a;
-  color: #d7dadd;
-}
-
-footer a { color: inherit; }
-footer a:link { color: inherit; }
-footer a:visited { color: inherit; }
