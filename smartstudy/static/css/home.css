@@ -25,13 +25,19 @@
 }
 
 section {
-	max-width: 960px;
-   padding: 5% 2%;
-  margin: 0 auto;
+    max-width: 960px;
+    padding: 5% 2%;
+    margin: 0 auto;
 }
 
 section:nth-child(2n+1) {
-  background-color: #ddd;
+    background-color: #ddd;
+}
+
+footer {
+    max-width: 960px;
+    padding: 2% 2% 5%;
+    margin: 0 auto;
 }
 
 footer .social {
@@ -42,4 +48,9 @@ footer .info {
 
 footer .info li {
     list-style: none;
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+footer .howoldweare {
 }
