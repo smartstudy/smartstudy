@@ -1,7 +1,7 @@
 <h1>제품</h1>
-<ul class="products">
+<ul class="products clearfix">
 {% for product in products %}
-  <li>
+  <li class="clearfix">
     <a class="icon" href="{{ product.store_url }}">
       <img src="{{ product.icon }}" alt="{{ product.name }}" />
     </a>
