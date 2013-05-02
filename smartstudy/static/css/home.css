@@ -41,8 +41,14 @@
 #navigation li {
 	float: left;
 	width: 15%;
-	padding: 10px 2.5%;
+	padding: 0 2.5%;
 	text-align: center;
+	line-height: 60px;
+	font-size: 1.125em;
+}
+
+#navigation li:first-child img {
+	height: 60px;
 }
 
 section {
