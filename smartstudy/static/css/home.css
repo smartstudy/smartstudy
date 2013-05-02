@@ -33,3 +33,13 @@ section {
 section:nth-child(2n+1) {
   background-color: #ddd;
 }
+
+footer .social {
+}
+
+footer .info {
+}
+
+footer .info li {
+    list-style: none;
+}
