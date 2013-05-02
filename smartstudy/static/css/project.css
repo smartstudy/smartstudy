@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/* clearfix */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }
+
 body {
   background-color: #e6eaee;
   color: #26303a;
