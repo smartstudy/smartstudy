@@ -13,6 +13,8 @@ requirements = [
     'South>=0.7.6',
     'django-compressor',
     'PIL',
+    'django-debug-toolbar',
+    'south',
 ]
 
 extras_require = {
