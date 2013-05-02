@@ -65,7 +65,7 @@ section h1 {
 }
 
 .container > section:nth-child(2n+1) {
-    background-color: #ddd;
+    background-color: #f3f3f8;
 }
 
 footer {
