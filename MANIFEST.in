@@ -1,0 +1,3 @@
+recursive-include smartstudy/static *
+recursive-include smartstudy/templates *
+exclude smartstudy/smartstudy/settings/local.py
