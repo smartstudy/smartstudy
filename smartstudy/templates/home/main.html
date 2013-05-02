@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+
+{% block extra_css %}
+<link href="{{ STATIC_URL }}css/home.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/crew.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/products.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/contact.css" rel="stylesheet">
+{% endblock %}
+
 {% block container %}
 <section id="brand">
     <h1>SMARTSTUDY</h1>
@@ -13,19 +21,19 @@
     </ul>
 </nav>
 
-<section id="about" name="about">
+<section id="about">
 {% include "home/about.html" %}
 </section>
 
-<section id="crew" name="crew">
+<section id="crew">
 {% include "home/crew.html" %}
 </section>
 
-<section id="products" name="products">
+<section id="products">
 {% include "home/products.html" %}
 </section>
 
-<section id="contact" name="contact">
+<section id="contact">
 {% include "home/contact.html" %}
 </section>
 {% endblock %}
