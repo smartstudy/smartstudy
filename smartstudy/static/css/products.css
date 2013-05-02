@@ -1,2 +1,43 @@
 @charset "UTF-8";
 
+#products li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#products .icon, #products .icon img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+#products .description {
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 960px) {
+  #products li {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #products li {
+    float: none;
+    width: auto;
+    text-align: left;
+  }
+
+  #products .icon, #products .icon img {
+    width: 80px; height: 80px;
+    margin: 0;
+  }
+
+  #products .icon { float: left; }
+  #products h2, #products .description {
+    margin-left: 100px;
+  }
+}

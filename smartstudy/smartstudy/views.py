@@ -36,6 +36,7 @@ class HomeView(TemplateView):
              'description': u'Lorem ipsum.',
              'store_url': ''},
         ]
+        context['products'] += context['products']
         return context
 
 def privacy(request):
