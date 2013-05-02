@@ -9,7 +9,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['crew'] = Crew.objects.all()
+        context['crew'] = Crew.objects.all().order_by('nick')
         context['products'] = [
             {'name': u'퐁! 인기동요∙동화',
              'icon': '#',
@@ -37,7 +37,6 @@ class HomeView(TemplateView):
              'store_url': ''},
         ]
         return context
-
 
 def privacy(request):
     return render(request, 'privacy.html')

@@ -1,22 +1,60 @@
 @charset "UTF-8";
 
+div.crew_first {
+    background-image:url('/static/images/home/talk_bubble.png');
+    background-repeat:no-repeat;
+    background-position: 208px 0;
+    position:relative;
+    overflow:hidden;
+    width:826px;
+    margin:20px auto;
+}
+
+div.crew_first img {
+    width: 178px;
+    height:178px;
+    border-radius:89px;
+    float:left;
+}
+div.crew_first .comment {
+    display:block;
+    border-radius:16px;
+    background-color: #e6eaee;
+    position:absolute;
+    left:238px;
+    height:132px;
+    width:500px;
+}
+div.crew_first strong{
+    display:block;
+    margin:20px;
+}
+div.crew_first span {
+    margin:0 20px;
+}
+
 ul.crew {
-    
+    clear:both;
+    margin:0 auto;
+    width:826px;
+    overflow:hidden;
 }
 
 ul.crew li {
-    display: inline-block;
-    width:150px;
-}
-
-ul.crew li img {
-    margin-right:10px;
-    width: 50px;
-    height: 50px;
-    display:block;
+    display: block;
+    margin-right:30px;
+    margin-bottom:20px;
     float:left;
 }
 
-ul.crew li strong {
+ul.crew li img {
+    width: 88px;
+    height: 88px;
+    border-radius:44px;
     display:block;
+    
+}
+
+ul.crew li strong,ul.crew li span {
+    display:none;
 }

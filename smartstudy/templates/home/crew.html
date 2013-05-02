@@ -1,9 +1,12 @@
 <h1>부족원</h1>
+<div class="crew_first"></div>
 <ul class="crew">{% for item in crew %}
     <li class="crew">
         <img src="{{ item.picture.url }}" />
-        <strong>{{ item.nick }}</strong>
-        <span>{{ item.comment }}</span>
+        <div class="comment">
+            <strong>{{ item.nick }}</strong>
+            <span>{{ item.comment }}</span>
+        </div>
     </li>{% endfor %}
 </ul>
 
