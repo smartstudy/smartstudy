@@ -1,9 +1,19 @@
 @charset "UTF-8";
 
 body {
-  background-color: #eee;
+  background-color: #e6eaee;
+  color: #26303a;
+}
+
+a {
+  color: #26303a;
 }
 
 footer {
-  background-color: #ccc;
+  background-color: #26303a;
+  color: #d7dadd;
 }
+
+footer a { color: inherit; }
+footer a:link { color: inherit; }
+footer a:visited { color: inherit; }
