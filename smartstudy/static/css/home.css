@@ -1,7 +1,33 @@
 @charset "UTF-8";
 
+.container {
+	width: 100%;
+}
+
+#navigation {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	z-index: 1000;
+}
+
+#navigation ul {
+	overflow: hidden;
+	width: 100%;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#navigation li {
+	float: left;
+	width: 15%;
+	padding: 10px 2.5%;
+	text-align: center;
+}
+
 section {
-  padding: 3em 0;
+	max-width: 960px;
+   padding: 5% 2%;
+  margin: 0 auto;
 }
 
 section:nth-child(2n+1) {
