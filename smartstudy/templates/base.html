@@ -2,16 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}smartstudy{% endblock title %}</title>
+    <title>{% block title %}SMARTSTUDY{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"> <!-- for IE10 -->
-	<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"  />
-	
-    <!-- Le styles -->
-    <link href="{{ STATIC_URL }}apps/chosen/chosen.css" rel="stylesheet">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"> <!-- for IE10 -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"  />
+        
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,29 +23,27 @@
   </head>
 
   <body>
-	<div class="container">
-	
-      <header class="base">
-	    <h1 class="brand"><a href="/">smartstudy</a></h1>
-	  </header>
-	  
-	  <section class="contents">
-		<h1>{% block page_title %}Example Base Template{% endblock page_title %}</h1>
-		{% block content %}
-		<p>Use this document as a way to quick start any new project.</p>
-      	{% endblock content %}
-	  </section>
-	  
-	  <footer class="base">
-          <p>사업자등록번호 : 214-88-59980</p>
-          <p>상호명 : 스마트스터디(주)</p>
-          <p>대표자명 : 김민석</p>
-          <p>주소지 : 서울시 서초구 서초동 1516-2 5층</p>
-          <p>고객센터번호 : 080-470-3000</p>
-          <p>2013 SMARTSTUDY</p>
-          <p><a href="/privacy">개인정보취급방침</a></p>
-	  </footer>
-	  
+    <div class="container">
+      <header>
+        <h1><a href="/">SMARTSTUDY</a></h1>
+      </header>
+          
+      <section class="contents">
+        <h1>{% block page_title %}Example Base Template{% endblock page_title %}</h1>
+        {% block content %}
+          <p>Use this document as a way to quick start any new project.</p>
+        {% endblock content %}
+      </section>
+          
+      <footer>
+        <p>사업자등록번호 : 214-88-59980</p>
+        <p>상호명 : 스마트스터디(주)</p>
+        <p>대표자명 : 김민석</p>
+        <p>주소지 : 서울시 서초구 서초동 1516-2 5층</p>
+        <p>고객센터번호 : 080-470-3000</p>
+        <p>2013 SMARTSTUDY</p>
+        <p><a href="/privacy">개인정보취급방침</a></p>
+      </footer>
     </div>
     <!-- Le javascript
     ================================================== -->
