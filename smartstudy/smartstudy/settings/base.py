@@ -185,6 +185,7 @@ DJANGO_APPS = (
     'django.contrib.admin',
     # 'django.contrib.admindocs',
 
+    'django.contrib.webdesign',
 )
 
 THIRD_PARTY_APPS = (

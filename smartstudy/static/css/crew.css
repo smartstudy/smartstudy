@@ -1,2 +1,22 @@
 @charset "UTF-8";
 
+ul.crew {
+    
+}
+
+ul.crew li {
+    display: inline-block;
+    width:150px;
+}
+
+ul.crew li img {
+    margin-right:10px;
+    width: 50px;
+    height: 50px;
+    display:block;
+    float:left;
+}
+
+ul.crew li strong {
+    display:block;
+}
