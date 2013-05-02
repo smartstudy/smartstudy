@@ -3,7 +3,6 @@
 div.crew_first {
     position : relative;
     overflow: hidden;
-    width: 826px;
     margin: 20px auto;
     position: relative;
 }
@@ -63,7 +62,6 @@ div.crew_first span {
 ul.crew {
     clear: both;
     margin: 0 auto;
-    width: 826px;
     overflow: hidden;
 }
 
@@ -74,13 +72,44 @@ ul.crew li {
     float: left;
 }
 
-ul.crew li img {
+ul.crew li img,ul.crew li.recruit span  {
     width: 88px;
     height: 88px;
     border-radius: 44px;
     display: block;
 }
 
-ul.crew li strong,ul.crew li span {
+ul.crew li div.comment {
     display: none;
+}
+
+ul.crew li.recruit span {
+    background:#ccc;
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#recruit {
+    display:none;
+    background:#dfdfdf;
+    position: relative;
+    margin-top:20px;
+}
+
+#recruit:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#recruit:after {
+    border-color: rgba(230, 234, 238, 0);
+    border-bottom-color: #dfdfdf;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
 }
