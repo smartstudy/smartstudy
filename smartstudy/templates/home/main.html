@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
+{% block container %}
+<section id="brand">
+    <h1>SMARTSTUDY</h1>
+</section>
+
+<nav>
+    <ul>
+        <li><a href="/#about">ABOUT</a></li>
+        <li><a href="/#crew">CREW</a></li>
+        <li><a href="/#products">PRODUCTS</a></li>
+        <li><a href="/#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
 <section id="about" name="about">
 {% include "home/about.html" %}
 </section>
+
 <section id="crew" name="crew">
 {% include "home/crew.html" %}
 </section>
-<section id="products" name="crew">
+
+<section id="products" name="products">
 {% include "home/products.html" %}
 </section>
+
 <section id="contact" name="contact">
 {% include "home/contact.html" %}
 </section>
+{% endblock %}
