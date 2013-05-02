@@ -6,9 +6,17 @@
 
 .container > header {
   padding: 1px 0;
-  background: #26303a url("../images/header/pattern.png") center repeat;
-  background-size: auto, cover;
+  background-color: #26303a;
+  background: url("../images/header/pattern.png") center repeat,
+              url("../images/header/slogan-1.jpg") center no-repeat;
+  background-size: auto, 1000px;
   color: white;
+}
+
+@media (min-width: 1000px) {
+  .container > header {
+    background-size: auto, cover;
+  }
 }
 
 .container > header > * {
