@@ -5,18 +5,18 @@
 }
 
 .container > header {
-  padding: 1px 0;
-  background-color: #26303a;
-  background: url("../images/header/pattern.png") center repeat,
-              url("../images/header/slogan-1.jpg") center no-repeat;
-  background-size: auto, 1000px;
-  color: white;
+    padding: 1px 0;
+    background-color: #26303a;
+    background: url("../images/header/pattern.png") center repeat,
+                url("../images/header/slogan-1.jpg") center no-repeat;
+    background-size: auto, 1000px;
+    color: white;
 }
 
 @media (min-width: 1000px) {
-  .container > header {
-    background-size: auto, cover;
-  }
+    .container > header {
+        background-size: auto, cover;
+    }
 }
 
 .container > header > * {
@@ -31,11 +31,11 @@
 .container > header > p  { font-size: 200%; }
 
 @media (max-width: 480px) {
-  .container > header { background-size: auto, 500px; }
-  .container > header > * { padding-left: 25px; }
-  .container > header > *:first-child { margin-top: 50px; }
-  .container > header > *:last-child  { margin-bottom: 50px; }
-  .container > header > p  { font-size: 150%; }
+    .container > header { background-size: auto, 500px; }
+    .container > header > * { padding-left: 25px; }
+    .container > header > *:first-child { margin-top: 50px; }
+    .container > header > *:last-child  { margin-bottom: 50px; }
+    .container > header > p  { font-size: 150%; }
 }
 
 #navigation {
