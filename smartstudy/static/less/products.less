@@ -111,6 +111,28 @@
     }
 }
 
+#products .more-apps {
+    @bgcolor: #26303a;
+    display: block;
+    width: 40%;
+    height: 64px;
+    line-height: 64px;
+    margin: 50px auto;
+    background-color: @bgcolor;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 9px;
+    &, &:link, &:active, &:hover, &:visited {
+        color: #ffffff;
+    }
+    transition: background-color 200ms ease;
+    &:hover {
+        background-color: lighten(@bgcolor, 10%);
+    }
+}
+
 @media screen and (max-width: 480px) {
     #products li {
         float: none;
