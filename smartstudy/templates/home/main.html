@@ -24,20 +24,28 @@
 </div>
 
 <div id="contents">
-    <section id="about" class="clearfix">
-    {% include "home/about.html" %}
-    </section>
-
-    <section id="crew" class="clearfix">
-    {% include "home/crew.html" %}
-    </section>
-
-    <section id="products" class="clearfix">
-    {% include "home/products.html" %}
-    </section>
-
-    <section id="contact" class="clearfix">
-    {% include "home/contact.html" %}
-    </section>
-    {% endblock %}
+<section id="about">
+<div class="inner">
+{% include "home/about.html" %}
 </div>
+</section>
+
+<section id="crew">
+<div class="inner">
+{% include "home/crew.html" %}
+</div>
+</section>
+
+<section id="products">
+<div class="inner">
+{% include "home/products.html" %}
+</div>
+</section>
+
+<section id="contact">
+<div class="inner">
+{% include "home/contact.html" %}
+</div>
+</div>
+</section>
+{% endblock %}

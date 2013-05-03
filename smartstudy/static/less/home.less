@@ -42,21 +42,27 @@
     margin-top: 60px;
 }
 
-section {
-    width:90%;
+.inner-column () {
+    .clearfix;
     max-width: 960px;
-    padding: 3% 2%;
     margin: 0 auto;
-    background-color: white;
 }
 
-section h1 {
-    font-size: 36px;
-    margin-bottom: 3%;
-}
-
-.container > section:nth-child(2n+1) {
+.container > section {
+    width: 100%;
     background-color: #f3f3f8;
+    padding: 60px 0;
+
+    > .inner { .inner-column; }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 3%;
+    }
+
+    &:nth-child(2n) {
+        background-color: white;
+    }
 }
 
 footer {
@@ -64,22 +70,18 @@ footer {
     -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
      box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+    color: #d7dadd;
+    font-size: 11px;
 }
 
-footer section a { color: inherit; }
-footer section a:link { color: inherit; }
-footer section a:visited { color: inherit; }
-footer section a:hover { color: white; }
+footer a { color: inherit; }
+footer a:link { color: inherit; }
+footer a:visited { color: inherit; }
+footer a:hover { color: white; }
 
-footer section {
+footer .inner {
+    .inner-column;
     padding: 2% 2% 4%;
-    background-color: #26303a;
-    color: #d7dadd;
-    -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
-     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
-
-    font-size: 11px;
 }
 
 footer .social {
