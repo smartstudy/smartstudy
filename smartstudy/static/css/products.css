@@ -3,48 +3,48 @@
 #products { background-color: white; }
 
 #products li {
-  float: left;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  width: 25%;
-  border-style: solid;
-  border-width: 0 2px 0 0;
-  border-color: rgb(231, 234, 237);
-  text-align: center;
-  margin: 20px 0;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 25%;
+    border-style: solid;
+    border-width: 0 2px 0 0;
+    border-color: rgb(231, 234, 237);
+    text-align: center;
+    margin: 20px 0;
 }
 
 #products .icon, #products .icon img {
-  display: block;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
 }
 
 #products .description {
-  margin: 0 1em;
+    margin: 0 1em;
 }
 
 @media screen and (max-width: 960px) {
-  #products li {
-    width: 33%;
-  }
+    #products li {
+        width: 33%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  #products li {
-    float: none;
-    width: auto;
-    text-align: left;
-  }
+    #products li {
+        float: none;
+        width: auto;
+        text-align: left;
+    }
 
-  #products .icon, #products .icon img {
-    width: 60px; height: 60px;
-    margin: 0;
-  }
+    #products .icon, #products .icon img {
+        width: 60px; height: 60px;
+        margin: 0;
+    }
 
-  #products .icon {
-    float: left;
-    margin-right: 20px;
-  }
+    #products .icon {
+        float: left;
+        margin-right: 20px;
+    }
 }

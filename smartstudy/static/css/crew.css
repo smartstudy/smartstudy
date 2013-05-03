@@ -131,13 +131,16 @@ ul.crew li.recruit span {
     div.crew_first .comment {
         padding:0 10px;
         width:auto;
-        left:108px;height:64px;border-radius:5px;}
+        left:108px;height:64px;border-radius:5px;
+    }
     div.crew_first .comment:after {
         border-width: 5px;
         margin-top: -5px;
     }
-    div.crew_first .comment strong {font-size:14px;margin:5px 0 0 0;
-        line-height:15px;}
+    div.crew_first .comment strong {
+        font-size:14px;margin:5px 0 0 0;
+        line-height:15px;
+    }
     div.crew_first .comment span {height:45px;padding:0;font-size:12px;}
     ul.crew li {margin-right:10px;margin-bottom:10px;}
     ul.crew li img,
@@ -159,13 +162,16 @@ ul.crew li.recruit span {
     div.crew_first .comment {
         padding:0 10px;
         width:auto;
-        left:54px;height:50px;border-radius:5px;}
+        left:54px;height:50px;border-radius:5px;
+    }
     div.crew_first .comment:after {
         border-width: 5px;
         margin-top: -5px;
     }
-    div.crew_first .comment strong {font-size:13px;margin:5px 0 0 0;
-        line-height:15px;}
+    div.crew_first .comment strong {
+        font-size:13px;margin:5px 0 0 0;
+        line-height:15px;
+    }
     div.crew_first .comment span {height:30px;padding:0;font-size:12px;}
     ul.crew li {margin-right:5px;margin-bottom:5px;}
     ul.crew li img,
