@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* clearfix */
+.clearfix {
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }  
+    zoom: 1;
+}
+
+body {
+    background-color: #e6eaee;
+    color: #26303a;
+}
+
+a {
+    color: #26303a;
+}
+
+@import "../css/navbar.css";
+@import "home";
