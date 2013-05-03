@@ -1,92 +1,132 @@
 @charset "UTF-8";
 
 .container {
-	width: 100%;
+    width: 100%;
 }
 
 .container > header {
   padding: 1px 0;
-  background: #26303a url("../images/header/pattern.png") center repeat;
-  background-size: auto, cover;
+  background-color: #26303a;
+  background: url("../images/header/pattern.png") center repeat,
+              url("../images/header/slogan-1.jpg") center no-repeat;
+  background-size: auto, 1000px;
   color: white;
 }
 
+@media (min-width: 1000px) {
+  .container > header {
+    background-size: auto, cover;
+  }
+}
+
 .container > header > * {
-  max-width: 960px;
-  margin: 0 auto;
-  padding-left: 50px;
-  text-transform: uppercase;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 50px;
+    text-transform: uppercase;
 }
 .container > header > *:first-child { margin-top: 100px; }
 .container > header > *:last-child  { margin-bottom: 200px; }
 .container > header > h1 { font-size: 250%; }
 .container > header > p  { font-size: 200%; }
 
+@media (max-width: 480px) {
+  .container > header { background-size: auto, 500px; }
+  .container > header > * { padding-left: 25px; }
+  .container > header > *:first-child { margin-top: 50px; }
+  .container > header > *:last-child  { margin-bottom: 50px; }
+  .container > header > p  { font-size: 150%; }
+}
+
 #navigation {
-	position: relative;
-	width: 100%;
-	background: #fff;
-	z-index: 1000;
-	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 #navigation ul {
-	overflow: hidden;
+    overflow: hidden;
     width:90%;
     max-width: 960px;
-	padding: 5px 2%;
-	margin: 0 auto;
+    padding: 5px 2%;
+    margin: 0 auto;
 }
 
 #navigation li {
-	float: left;
-	width: 15%;
-	padding: 0 2.5%;
-	text-align: center;
-	line-height: 60px;
-	font-size: 1.125em;
+    float: left;
+    width: 15%;
+    padding: 0 2.5%;
+    text-align: center;
+    line-height: 52px;
+    font-size: 1.125em;
+}
+
+#navigation li a {
+    color: #d7dadd;
+    font-weight: bold;
+}
+
+#navigation li.active a {
+    color: #1c2447;
 }
 
 #navigation li:first-child img {
-	height: 60px;
+    height: 40px;
 }
 
 section {
     width:90%;
     max-width: 960px;
-    padding: 5% 2%;
+    padding: 3% 2%;
     margin: 0 auto;
     background-color: white;
 }
 
+section h1 {
+    font-size: 36px;
+    margin-bottom: 3%;
+}
+
 .container > section:nth-child(2n+1) {
-    background-color: #ddd;
+    background-color: #f3f3f8;
 }
 
 footer {
     background-color: #16202a;
+    -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
-footer a { color: inherit; }
-footer a:link { color: inherit; }
-footer a:visited { color: inherit; }
+footer section a { color: inherit; }
+footer section a:link { color: inherit; }
+footer section a:visited { color: inherit; }
+footer section a:hover { color: white; }
 
 footer section {
-    padding: 2% 2% 5%;
+    padding: 2% 2% 4%;
     background-color: #26303a;
     color: #d7dadd;
+    -moz-box-shadow:    inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+     box-shadow:        inset 0  10px 10px -10px rgba(0, 0, 0, 0.5);
+
+    font-size: 11px;
 }
 
 footer .social {
 }
 
 footer .info {
+    padding: 5px 0 10px;
 }
 
 footer .info li {
     list-style: none;
     float: left;
-    margin: 5px 10px 5px 0;
+    margin: 5px 20px 0px 0;
 }
 
 footer .howoldweare {
