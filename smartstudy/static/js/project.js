@@ -21,18 +21,19 @@ function initialize() {
 }
 
 $(function() {
-	var $navigation = $('#navigation');
-	var nav_offset_y = $navigation.offset().top;
+	var $navbar = $('#navbar');
+	var navbar_offset_y = $navbar.offset().top;
 
 	function fixedNavigation() {
-		if ($(window).scrollTop() > nav_offset_y) {
-			$navigation.css({
+		if ($(window).scrollTop() > navbar_offset_y) {
+			$navbar.css({
 				'top': 0,
 				'position': 'fixed'
 			});
 		} else {
-			$navigation.css({
-				'position': 'relative'
+			$navbar.css({
+				'top': navbar_offset_y,
+				'position': 'absolute'
 			});
 		}
 	}

@@ -11,29 +11,33 @@
     <p>No.1 Contents Provider</p>
 </header>
 
-<nav id="navigation">
-    <ul class="nav">
-    	<!-- li><img src="{{ STATIC_URL }}images/home/smartstudy_logo.png" alt="" /></li -->
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#crew">CREW</a></li>
-        <li><a href="#products">PRODUCTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
-</nav>
+<div id="navbar">
+    <nav class="navbar-inner">
+        <a href="" alt="logo" class="logo"></a>
+        <ul class="nav">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#crew">CREW</a></li>
+            <li><a href="#products">PRODUCTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</div>
 
-<section id="about" class="clearfix">
-{% include "home/about.html" %}
-</section>
+<div id="contents">
+    <section id="about" class="clearfix">
+    {% include "home/about.html" %}
+    </section>
 
-<section id="crew" class="clearfix">
-{% include "home/crew.html" %}
-</section>
+    <section id="crew" class="clearfix">
+    {% include "home/crew.html" %}
+    </section>
 
-<section id="products" class="clearfix">
-{% include "home/products.html" %}
-</section>
+    <section id="products" class="clearfix">
+    {% include "home/products.html" %}
+    </section>
 
-<section id="contact" class="clearfix">
-{% include "home/contact.html" %}
-</section>
-{% endblock %}
+    <section id="contact" class="clearfix">
+    {% include "home/contact.html" %}
+    </section>
+    {% endblock %}
+</div>
