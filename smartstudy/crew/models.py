@@ -8,9 +8,14 @@ class Crew(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['-id']
 
-    nick = models.CharField(verbose_name=u'별명',
-                            help_text=u'모듈이 표시되는 한글 명칭을 적어주세요.',
-                            max_length=50)
-    uid = models.CharField(verbose_name=u'영문 아이디', max_length=50, null=True, blank=True)
+    nick = models.CharField(verbose_name=u'별명', max_length=50)
+    name = models.CharField(verbose_name=u'이름', max_length=50, 
+                            null=True, blank=True)
+    uid = models.CharField(verbose_name=u'영문 아이디', max_length=50,
+                           null=True, blank=True)
     picture = models.ImageField(verbose_name=u'사진', upload_to='crew')
-    comment = models.TextField(verbose_name=u'한마디',)
+    comment = models.TextField(verbose_name=u'한마디', blank=True)
+    email = models.EmailField(verbose_name=u'이메일',null=True, blank=True)
+    homepage = models.URLField(verbose_name=u'홈페이지',null=True, blank=True)
+    facebook = models.URLField(verbose_name=u'페이스북',null=True, blank=True)
+    twitter = models.URLField(verbose_name=u'트위터',null=True, blank=True)
