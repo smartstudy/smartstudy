@@ -27,12 +27,10 @@ $(function() {
 	function fixedNavigation() {
 		if ($(window).scrollTop() > navbar_offset_y) {
 			$navbar.css({
-				'top': 0,
 				'position': 'fixed'
 			});
 		} else {
 			$navbar.css({
-				'top': navbar_offset_y,
 				'position': 'absolute'
 			});
 		}
