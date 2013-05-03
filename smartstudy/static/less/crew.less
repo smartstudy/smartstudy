@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+div.crew_first {
+    position : relative;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+}
+
+div.crew_first img {
+    width: 178px;
+    height: 178px;
+    border-radius: 89px;
+    float: left;
+}
+
+div.crew_first .comment {
+    display:block;
+    border-radius : 16px;
+    background-color: #e6eaee;
+    position: absolute;
+    left: 208px;
+    height: 114px;
+    width: auto;
+    border-radius: 16px;
+}
+
+div.crew_first .comment:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    pointer-events: none;
+}
+
+div.crew_first .comment:after {
+    border-color: rgba(230, 234, 238, 0);
+    border-right-color: #e6eaee;
+    border-width: 10px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+div.crew_first strong {
+    display: block;
+    font-weight: 900;
+    font-size: 25px;
+    line-height:30px;
+    margin: 10px 30px 0px 30px;
+}
+
+div.crew_first span {
+    display: table-cell;
+    vertical-align: middle;
+    height:60px;
+    padding:0 30px;
+    font-size: 18px;
+}
+
+ul.crew {
+    clear: both;
+    margin: 0 auto;
+    position:relative;
+    left:10px;
+    overflow: hidden;
+}
+
+ul.crew li {
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+ul.crew li img,ul.crew li.recruit span  {
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    display: block;
+}
+
+ul.crew li div.comment {
+    display: none;
+}
+
+ul.crew li.recruit span {
+    background:#e6eaee;
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#recruit {
+    display:none;
+    background:#e6eaee;
+    position: relative;
+    margin-top:20px;
+    padding:40px;
+    border-radius:16px;
+}
+
+#recruit:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#recruit:after {
+    border-color: rgba(230, 234, 238, 0);
+    border-bottom-color: #e6eaee;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+#recruit h1 {font-size:25px;margin-bottom:20px;}
+#recruit h2 {font-size:16px;margin-bottom:40px;}
+#recruit p {font-size:15px;margin:10px;}
+#recruit ul {margin:10px 40px;}
+#recruit ul li {list-style-type: disc;font-size:13px;line-height:20px;}
+
+@media screen and (max-width: 960px) {
+    div.crew_first {height:88px;width:auto;}
+    div.crew_first img {width:88px;height:88px;}
+    div.crew_first .comment {
+        padding:0 10px;
+        width:auto;
+        left:108px;height:64px;border-radius:5px;}
+    div.crew_first .comment:after {
+        border-width: 5px;
+        margin-top: -5px;
+    }
+    div.crew_first .comment strong {font-size:14px;margin:5px 0 0 0;
+        line-height:15px;}
+    div.crew_first .comment span {height:45px;padding:0;font-size:12px;}
+    ul.crew li {margin-right:10px;margin-bottom:10px;}
+    ul.crew li img,
+    ul.crew li.recruit span {width:64px;height:64px;}
+    ul.crew li.recruit span {width:auto;font-size:13px;padding:0 5px;}
+    
+    #recruit {padding:10px;border-radius:5px;}
+    #recruit h1 {font-size:15px;margin-bottom:10px;}
+    #recruit h2 {font-size:13px;margin-bottom:20px;}
+    #recruit p {font-size:12px;margin:5px;}
+    #recruit ul {margin:5px 20px;}
+    #recruit ul li {list-style-type: disc;font-size:12px;line-height:15px;}
+    #recruit:after {border-width: 10px;margin-left:-10px;}
+}
+
+@media screen and (max-width: 480px) {
+    div.crew_first {height:50px;width:auto;}
+    div.crew_first img {width:44px;height:44px;}
+    div.crew_first .comment {
+        padding:0 10px;
+        width:auto;
+        left:54px;height:50px;border-radius:5px;}
+    div.crew_first .comment:after {
+        border-width: 5px;
+        margin-top: -5px;
+    }
+    div.crew_first .comment strong {font-size:13px;margin:5px 0 0 0;
+        line-height:15px;}
+    div.crew_first .comment span {height:30px;padding:0;font-size:12px;}
+    ul.crew li {margin-right:5px;margin-bottom:5px;}
+    ul.crew li img,
+    ul.crew li.recruit span {width:44px;height:44px;}
+    ul.crew li.recruit span {width:auto;font-size:12px;padding:0 5px;}
+}
