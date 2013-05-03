@@ -29,19 +29,25 @@
         background-size: auto 90%;
 
         @media (max-width: 480px) {
-            .logo {
-                width: 20%;
-                height: 30px;
-                background: url(../images/home/smartstudy_logo_mini.png) center center no-repeat;
-                background-size: auto 90%;
-            }
+            width: 20%;
+            height: 30px;
+            background: url(../images/home/smartstudy_logo_mini.png) center center no-repeat;
+            background-size: auto 90%;
         }
     }
+
+
 
     ul {
         float: left;
         width: 80%;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
+
+
 
     li {
         float: left;
@@ -55,6 +61,7 @@
             color: #d7dadd;
             font-weight: bold;
             display: block;
+            font-family: Helvetica Neue;
         }
 
         &.active a {
