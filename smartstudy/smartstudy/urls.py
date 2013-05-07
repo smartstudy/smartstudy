@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import patterns, include, url
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-import smartstudy.views
+from django.views.generic.base import TemplateView
 from smartstudy.settings.base import MEDIA_ROOT
+import smartstudy.views
 
 
 admin.autodiscover()
@@ -11,7 +11,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', smartstudy.views.HomeView.as_view(), name='home'),
-    url(r'^privacy', smartstudy.views.privacy, name='privacy'),
+    url(r'^privacy', TemplateView.as_view(template_name="privacy.html")),
     # url(r'^smartstudy/', include('smartstudy.foo.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -20,6 +20,3 @@ urlpatterns = patterns('',
     
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT }),
 )
-
-
-

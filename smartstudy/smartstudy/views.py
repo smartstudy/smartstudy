@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.views.generic.base import TemplateView
-from django.shortcuts import render
 from crew.models import Crew
 
 
@@ -38,7 +37,3 @@ class HomeView(TemplateView):
         ]
         context['products'] += context['products']
         return context
-
-
-def privacy(request):
-    return render(request, 'privacy.html')

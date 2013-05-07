@@ -1,17 +1,33 @@
 <h1>CREW</h1>
-<div class="crew_first"></div>
+
 <ul class="crew">{% for item in crew %}
     <li class="crew">
         <img src="{{ item.picture.url }}" />
-        <div class="comment">
+        <div class="detail">
+            <p class="comment">{{ item.comment }}</p>
             <strong>{{ item.nick }}</strong>
-            <span>{{ item.comment }}</span>
+            {% if item.name %}<em>{{ item.name }}</em>{% endif %}
+            <div class="urls">
+                {% if item.email %}
+                <a class="icon email" href="{{ item.email }}">email</a>
+                {% endif %}
+                {% if item.home %}
+                <a class="icon home" href="{{ item.home }}">home</a>
+                {% endif %}
+                {% if item.facebook %}
+                <a class="icon facebook" href="{{ item.facebook }}">facebook</a>
+                {% endif %}
+                {% if item.twitter %}
+                <a class="icon twitter" href="{{ item.twitter }}">twitter</a>
+                {% endif %}
+            </div>
         </div>
     </li>{% endfor %}
     <li class="recruit">
-        <span>거기 자네..</span>
+        <span>HEY, YOU!</span>
     </li>
 </ul>
+
 <div id="recruit">
     <h1>거기 자네, 오지 않겠는가?</h1>
     <h2>스마트스터디는 넥슨/네오위즈/NHN 등에서 인터넷과 게임산업의 발전을 주도한 최고의 인재들로 구성되어 있습니다.</h2>
