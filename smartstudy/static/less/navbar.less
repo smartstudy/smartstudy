@@ -1,18 +1,13 @@
 @charset "UTF-8";
 
 #navbar {
-    top: 360px;
+    top: 0;
     position: absolute;
     width: 100%;
     background: #fff;
     z-index: 1000;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
-
-    @media (max-width: 480px) {
-        #navbar {
-            top: 160px;
-        }
-    }
+    opacity: 0.9;
 }
 
 .navbar-inner {
@@ -29,18 +24,20 @@
         background-size: auto 90%;
 
         @media (max-width: 480px) {
-            .logo {
-                width: 20%;
-                height: 30px;
-                background: url(../images/home/smartstudy_logo_mini.png) center center no-repeat;
-                background-size: auto 90%;
-            }
+            width: 20%;
+            height: 30px;
+            background: url(../images/home/smartstudy_logo_mini.png) center center no-repeat;
+            background-size: auto 90%;
         }
     }
 
     ul {
         float: left;
         width: 80%;
+
+        @media (max-width: 480px) {
+            display: none;
+        }
     }
 
     li {
@@ -55,10 +52,12 @@
             color: #d7dadd;
             font-weight: bold;
             display: block;
+            font-family: Helvetica Neue;
         }
 
         &.active a {
             color: #1c2447;
+            transition: color 500ms ease;
         }
     }
 }
