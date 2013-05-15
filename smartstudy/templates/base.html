@@ -4,42 +4,79 @@
     <meta charset="utf-8">
     <title>{% block title %}SMARTSTUDY{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"> <!-- for IE10 -->
+    <meta name="description" content="smartstudy is contents provider">
+    <meta name="author" content="SMARTSTUDY">
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon"  />
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- css reset -->
-    <link href="{{ STATIC_URL }}css/reset.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}components/normalize-css/normalize.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}less/base.less" rel="stylesheet" type="text/less">
     <!-- This file store project specific CSS -->
     <link href="{{ STATIC_URL }}less/base.less" rel="stylesheet" type="text/less">
-
-    <!-- Use this to quickly test CSS changes in a template,
-        then move to project.css -->
     {% block extra_css %}{% endblock extra_css %}
   </head>
-
   <body data-spy="scroll" data-target="#navbar">
     <div class="container">
       {% block container %}
+        <header>
+            <h1>SMARTSTUDY</h1>
+            <p>No.1 Contents Provider</p>
+            <nav class="main">
+                <ul>
+                    <li class="brand"><a href="/" >SMARTSTUDY</a></li>
+                    <li class="about"><a href="#about">ABOUT</a></li>
+                    <li class="crew"><a href="#crew">CREW</a></li>
+                    <li class="product"><a href="#products">PRODUCTS</a></li>
+                    <li class="contact"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="contents">
+        {% block contents %}
+            <section id="about">{% include "section/about.html" %}</section>
+            <section id="crew">{% include "section/crew.html" %}</section>
+            <section id="products">{% include "section/products.html" %}</section>
+            <section id="contact">{% include "section/contact.html" %}</section>
+        {% endblock %}
+        </div>
       {% endblock %}
+      <footer>
+        <ul class="social">
+            <li class="facebook">
+                <a href="https://www.facebook.com/SmartStudyKR">Facebook</a>
+            </li>
+            <li class="twitter">
+                <a href="https://twitter.com/smartstudy_kr">Twitter</a>
+            </li>
+        </ul>
+        <ul class="info">
+            <li>사업자등록번호 : 214-88-59980</li>
+            <li>상호명 : 스마트스터디(주)</li>
+            <li>대표자명 : 김민석</li>
+            <li>주소지 : 서울시 서초구 서초동 1516-2 5층</li>
+            <li>고객센터번호 : 080-470-3000</li>
+            <li><a href="/privacy">개인정보취급방침</a></li>
+        </ul>
+        <p class="copyright">ⓒ 2010-{% now 'Y' %} SMARTSTUDY</p>
+      </footer>
     </div>
-    {% include "footer.html" %}
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ STATIC_URL }}libs/less-1.3.3.min.js" type="text/javascript"></script>
     <script src="{{ STATIC_URL }}components/jquery/jquery.min.js" type="text/javascript"></script>
-    <!-- place project specific Javascript in this file -->
     <script src="{{ STATIC_URL }}libs/bootstrap-scrollspy.js"></script>
     <script src="{{ STATIC_URL }}js/project.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2qaG0pmfBOwbQxN-Ni-ZzklGIVIN-tTk&sensor=false"></script>
+    <script src="{{ STATIC_URL }}js/crew.js"></script>
     {% block extra_js %}{% endblock extra_js %}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18919025-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
-  {% include "ga.html" %}
 </html>

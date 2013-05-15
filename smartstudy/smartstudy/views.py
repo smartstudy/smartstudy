@@ -4,7 +4,7 @@ from crew.models import Crew
 
 
 class HomeView(TemplateView):
-    template_name = 'home/main.html'
+    template_name = 'base.html'
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
