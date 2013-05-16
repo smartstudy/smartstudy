@@ -5,12 +5,11 @@ header {
   background: url("../images/header/pattern.png") center repeat, url("../images/header/slogan-2.jpg") center no-repeat;
   background-size: auto, 100%;
   color: white;
-  h1 {
-    font-size: 80px;
-    font-weight: normal;
-  }
-  p {
-    font-size: 40px;
-  }
 }
-
+header h1 {
+  font-size: 80px;
+  font-weight: normal;
+}
+header p {
+  font-size: 40px;
+}

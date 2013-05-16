@@ -1,0 +1,81 @@
+@charset "UTF-8";
+#contact {
+  /* #map {
+      width: 50%;
+      height: 400px;
+      float: left;
+  } */
+
+}
+#contact .wrap {
+  margin: 10% 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+#contact .wrap p {
+  line-height: 1.255em;
+}
+#contact .wrap p:nth-child(2) {
+  font-size: 2em;
+  color: #494949;
+}
+@media (max-width: 480px) {
+  #contact .wrap p:nth-child(2) {
+    font-size: 1.5em;
+  }
+}
+#contact #map_image {
+  width: 100%;
+  position: relative;
+}
+#contact #map_image .address {
+  width: 40%;
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  color: #fff;
+}
+#contact #map_image .address p {
+  line-height: 1.2em;
+  font-size: 2em;
+}
+@media (max-width: 480px) {
+  #contact #map_image .address p {
+    font-size: 1.5em;
+  }
+}
+#contact #map_image .address p:first-child {
+  font-size: 1.2em;
+}
+#contact #map_image .address .google-map {
+  display: block;
+  width: 80%;
+  height: 64px;
+  line-height: 64px;
+  margin-top: 2%;
+  background-color: #26303a;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 9px;
+  transition: background-color 200ms ease;
+}
+#contact #map_image .address .google-map,
+#contact #map_image .address .google-map:link,
+#contact #map_image .address .google-map:active,
+#contact #map_image .address .google-map:hover,
+#contact #map_image .address .google-map:visited {
+  color: #ffffff;
+}
+#contact #map_image .address .google-map:hover {
+  background-color: #3a4959;
+}
+@media (max-width: 480) {
+  #contact #map_image .address .google-map {
+    width: 100%;
+  }
+}
+#contact #map_image img {
+  width: 100%;
+}

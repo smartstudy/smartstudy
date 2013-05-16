@@ -7,11 +7,6 @@ __pycache__/
 /build/
 /dist/
 *.egg-info/
-
 *.db
-
-.settings/.jsdtscope
-
-.settings/org.eclipse.wst.jsdt.ui.superType.container
-
-.settings/org.eclipse.wst.jsdt.ui.superType.name
+.idea/
+.settings/

@@ -10,70 +10,89 @@
 @media_ratio_s: 1/2;
 
 .m-width(@value) {
-    width: @value;
-    @media @media_query_x { width: @value * @media_ratio_x; }
-    @media @media_query_l { width: @value * @media_ratio_l; }
-    @media @media_query_m { width: @value * @media_ratio_m; }
-    @media @media_query_s { width: @value * @media_ratio_s; }
+  width: @value;
+  @media @media_query_x {
+    width: @value * @media_ratio_x;
+  }
+  @media @media_query_l {
+    width: @value * @media_ratio_l;
+  }
+  @media @media_query_m {
+    width: @value * @media_ratio_m;
+  }
+  @media @media_query_s {
+    width: @value * @media_ratio_s;
+  }
 }
+
 .m-height(@value) {
-    height: @value;
-    @media @media_query_x { height: @value * @media_ratio_x; }
-    @media @media_query_l { height: @value * @media_ratio_l; }
-    @media @media_query_m { height: @value * @media_ratio_m; }
-    @media @media_query_s { height: @value * @media_ratio_s; }
+  height: @value;
+  @media @media_query_x {
+    height: @value * @media_ratio_x;
+  }
+  @media @media_query_l {
+    height: @value * @media_ratio_l;
+  }
+  @media @media_query_m {
+    height: @value * @media_ratio_m;
+  }
+  @media @media_query_s {
+    height: @value * @media_ratio_s;
+  }
 }
+
 .m-margin(@left, @top, @right, @bottom) {
-    margin: @arguments;
-    @media @media_query_x { 
-        margin: @left * @media_ratio_x
-                @top * @media_ratio_x
-                @right * @media_ratio_x
-                @bottom * @media_ratio_x;
-    }
-    @media @media_query_l {
-        margin: @left * @media_ratio_l
-                @top * @media_ratio_l
-                @right * @media_ratio_l
-                @bottom * @media_ratio_l;
-    }
-    @media @media_query_m {
-        margin: @left * @media_ratio_m
-                @top * @media_ratio_m
-                @right * @media_ratio_m
-                @bottom * @media_ratio_m;
-    }
-    @media @media_query_s {
-        margin: @left * @media_ratio_s
-                @top * @media_ratio_s
-                @right * @media_ratio_s
-                @bottom * @media_ratio_s;
-    }
+  margin: @arguments;
+  @media @media_query_x {
+    margin: @left * @media_ratio_x
+      @top * @media_ratio_x
+      @right * @media_ratio_x
+      @bottom * @media_ratio_x;
+  }
+  @media @media_query_l {
+    margin: @left * @media_ratio_l
+      @top * @media_ratio_l
+      @right * @media_ratio_l
+      @bottom * @media_ratio_l;
+  }
+  @media @media_query_m {
+    margin: @left * @media_ratio_m
+      @top * @media_ratio_m
+      @right * @media_ratio_m
+      @bottom * @media_ratio_m;
+  }
+  @media @media_query_s {
+    margin: @left * @media_ratio_s
+      @top * @media_ratio_s
+      @right * @media_ratio_s
+      @bottom * @media_ratio_s;
+  }
 }
+
 .m-padding(@left, @top, @right, @bottom) {
-    padding: @arguments;
-    @media @media_query_x { 
-        padding: @left * @media_ratio_x
-                 @top * @media_ratio_x
-                 @right * @media_ratio_x
-                 @bottom * @media_ratio_x;
-    }
-    @media @media_query_l {
-        padding: @left * @media_ratio_l
-                 @top * @media_ratio_l
-                 @right * @media_ratio_l
-                 @bottom * @media_ratio_l;
-    }
-    @media @media_query_m {
-        padding: @left * @media_ratio_m
-                 @top * @media_ratio_m
-                 @right * @media_ratio_m
-                 @bottom * @media_ratio_m;
-    }
-    @media @media_query_s {
-        padding: @left * @media_ratio_s
-                 @top * @media_ratio_s
-                 @right * @media_ratio_s
-                 @bottom * @media_ratio_s;
-    }
+  padding: @arguments;
+  @media @media_query_x {
+    padding: @left * @media_ratio_x
+      @top * @media_ratio_x
+      @right * @media_ratio_x
+      @bottom * @media_ratio_x;
+  }
+  @media @media_query_l {
+    padding: @left * @media_ratio_l
+      @top * @media_ratio_l
+      @right * @media_ratio_l
+      @bottom * @media_ratio_l;
+  }
+  @media @media_query_m {
+    padding: @left * @media_ratio_m
+      @top * @media_ratio_m
+      @right * @media_ratio_m
+      @bottom * @media_ratio_m;
+  }
+  @media @media_query_s {
+    padding: @left * @media_ratio_s
+      @top * @media_ratio_s
+      @right * @media_ratio_s
+      @bottom * @media_ratio_s;
+  }
 }
