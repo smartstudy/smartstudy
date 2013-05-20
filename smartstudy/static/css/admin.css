@@ -1,0 +1,6 @@
+@charset "UTF-8";
+#result_list input.vURLField,
+#result_list input.vTextField {
+  width: 96%;
+  margin: 0 auto;
+}

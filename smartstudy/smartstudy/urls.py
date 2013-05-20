@@ -8,8 +8,8 @@ import smartstudy.views
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
+urlpatterns = patterns(
+    '',
     url(r'^$', smartstudy.views.HomeView.as_view(), name='home'),
     url(r'^privacy', TemplateView.as_view(template_name="privacy.html")),
     # url(r'^smartstudy/', include('smartstudy.foo.urls')),
@@ -17,6 +17,6 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT }),
+
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
 )

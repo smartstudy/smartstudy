@@ -9,7 +9,7 @@ class Crew(models.Model):
         ordering = ['-id']
 
     nick = models.CharField(verbose_name=u'별명', max_length=50)
-    name = models.CharField(verbose_name=u'이름', max_length=50, 
+    name = models.CharField(verbose_name=u'이름', max_length=50,
                             null=True, blank=True)
     uid = models.CharField(verbose_name=u'영문 아이디', max_length=50,
                            null=True, blank=True)

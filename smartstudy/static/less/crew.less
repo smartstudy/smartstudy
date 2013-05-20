@@ -1,91 +1,50 @@
 @charset "UTF-8";
-@import "mixin-media-attr.less";
-
-@crew_icon_size: 88px;
-@crew_icon_margin: 30px;
 
 ul.crew {
-  clear: both;
-  margin: 0 auto;
+  margin: 0 5%;
   overflow: hidden;
+  text-align: center;
   li {
-    display: block;
-    float: left;
-    cursor: pointer;
-    .m-margin(0, 0, @crew_icon_margin * (2/3), @crew_icon_margin);
-    img, &.recruit span {
-      display: block;
-      .m-width(@crew_icon_size);
-      .m-height(@crew_icon_size);
-      border-radius: 100%;
+    overflow: hidden;
+    width: 135px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 20px 20px 0;
+    position: relative;
+    img {
+      border-radius: 15px;
     }
-    &.recruit span {
-      background: #e6eaee;
-      display: table-cell;
-      vertical-align: middle;
+    em {
+      font-style: normal;
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      display: block;
+      font-size: 15px;
+      color: #ffffff;
+      text-shadow: 1px 1px 1px #333333
+    }
+    strong {font-size:14px;
+      line-height:2em;
+    letter-spacing:4px;
+    text-indent: 4px;}
+    p.comment {
+      background: #e5e5e5;
+      border-radius: 15px;
+      padding: 10px;
       text-align: center;
-    }
-    .detail {
-      display: none;
-    }
-    &.first {
-      .m-padding(@crew_icon_margin, @crew_icon_margin, @crew_icon_margin, @crew_icon_margin);
-      border-radius: 10px;
-      background: #e6eaee;
-      overflow: hidden;
-      display: block;
-      float: none;
-      clear: both;
-      img {
-        @w : 20%;
-        width: 18%;
-        height: 18%;
-        border-radius: 100%;
-        float: left;
-      }
-      .detail {
-        display: table-cell;
-        float: left;
-        margin-left: 4%;
-        width: 78%;
-        .comment {
-          background-color: #ffffff;
-          border-radius: @crew_icon_margin / 2;
-          position: relative;
-          padding: 5% 5%;
-          font-size: 15px;
-          &:after {
-            right: 100%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(255, 255, 255, 0);
-            border-right-color: #ffffff;
-            border-width: 10px;
-            top: 50%;
-            margin-top: -10px;
-          }
-        }
-        strong, em {
-          float: left;
-        }
-        div.urls {
-          float: right;
-        }
-      }
+      font-size: 13px;
+      .arrow(5px, #e5e5e5, top, 50%, 0px,#e5e5e5);
     }
   }
 }
 
-#recruit {
+div#recruit {
   display: none;
   background: #e6eaee;
   position: relative;
-  margin-top: 20px;
-  padding: 40px;
+  margin: 20px;
+  padding: 20px;
   border-radius: 16px;
   &:after {
     bottom: 100%;
@@ -101,28 +60,26 @@ ul.crew {
     left: 50%;
     margin-left: -20px;
   }
-
   h1 {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 20px !important;
+    margin: 0 0 20px 0;
+    text-align: center;
   }
 
   h2 {
     font-size: 16px;
-    margin-bottom: 40px;
   }
 
   p {
-    font-size: 15px;
-    margin: 10px;
+    font-size: 14px;
+    padding: 20px 0 0 0;
   }
 
   ul {
-    margin: 10px 40px;
     li {
+      margin-left: 20px;
       list-style-type: disc;
       font-size: 13px;
-      line-height: 20px;
     }
   }
 }

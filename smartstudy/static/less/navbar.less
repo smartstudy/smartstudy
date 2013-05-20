@@ -11,18 +11,23 @@
   .navbar-inner {
     border: none;
     background: #ffffff;
+    overflow: hidden;
+    .container {
+      overflow: hidden;
+    }
   }
   .brand {
     background: url(../images/home/smartstudy_logo.png) center center no-repeat;
     background-size: auto 90%;
-    width: 20%;
+    width: 180px;
     height: 60px;
     overflow: hidden;
     line-height: 300;
   }
   .nav {
+    overflow: hidden;
     li {
-      padding: 0 2.5%;
+      overflow: hidden;
       line-height: 60px;
       font-size: 1.125em;
       text-align: center;
@@ -31,8 +36,12 @@
         font-weight: bold;
         display: block;
         font-family: Helvetica Neue;
+        padding-left: 2em;
+        padding-right: 2em;
       }
-      &.active a {
+      &.active a,
+      &.active a:hover,
+      &.active a:focus {
         color: #1c2447;
         background: #ffffff;
         transition: color 500ms ease;

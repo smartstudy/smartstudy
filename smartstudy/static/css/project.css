@@ -1,6 +1,59 @@
 @charset "UTF-8";
-header {
+/* ------------------------ */
+/* LESS mixin for CSS arrow */
+/* ------------------------ */
+/* Usage
+ * .arrow(size, color, direction, offset, border-size, border-color); 
+ */
+/* Where
+ * Size is the with of the arrow
+ * Color is the color of the arrow (plain color required)
+ * Direction is the orientation of the arrow (top, right, bottom, left)
+ * Offset is the position of the arrow on its axis (px / em)
+ * Border-size is the width of the border if there is one (optional; default "0")
+ * Border-color is the color of the border if there is one (optional; default "inherit"); 
+ */
+/* Extra
+ * Drop-shadows can be used on the element to create a shadow on the arrow as well 
+ */
+a {
+  text-decoration: none;
+  color: #26303a;
+}
+ul {
   padding: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #e6eaee;
+  color: #26303a;
+}
+#contents {
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+#contents section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f3f8;
+  padding: 3% 0;
+}
+#contents section:nth-child(2n) {
+  background-color: white;
+}
+#contents section h1 {
+  font-size: 30px;
+  margin: 0 3% 3% 3%;
+  text-transform: uppercase;
+}
+header {
+  padding: 200px 0;
   background-color: #26303a;
   background: url("../images/header/pattern.png") center repeat, url("../images/header/slogan-2.jpg") center no-repeat;
   background-size: auto, 100%;
@@ -25,17 +78,24 @@ header p {
 .navbar .navbar-inner {
   border: none;
   background: #ffffff;
+  overflow: hidden;
+}
+.navbar .navbar-inner .container {
+  overflow: hidden;
 }
 .navbar .brand {
   background: url(../images/home/smartstudy_logo.png) center center no-repeat;
   background-size: auto 90%;
-  width: 20%;
+  width: 180px;
   height: 60px;
   overflow: hidden;
   line-height: 300;
 }
+.navbar .nav {
+  overflow: hidden;
+}
 .navbar .nav li {
-  padding: 0 2.5%;
+  overflow: hidden;
   line-height: 60px;
   font-size: 1.125em;
   text-align: center;
@@ -45,8 +105,12 @@ header p {
   font-weight: bold;
   display: block;
   font-family: Helvetica Neue;
+  padding-left: 2em;
+  padding-right: 2em;
 }
-.navbar .nav li.active a {
+.navbar .nav li.active a,
+.navbar .nav li.active a:hover,
+.navbar .nav li.active a:focus {
   color: #1c2447;
   background: #ffffff;
   transition: color 500ms ease;
@@ -94,196 +158,122 @@ nav.main ul li.active a {
   color: #1c2447;
   transition: color 500ms ease;
 }
+footer {
+  background-color: #16202a;
+  -moz-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  color: #d7dadd;
+  font-size: 11px;
+}
+footer a {
+  color: inherit;
+}
+footer a:link {
+  color: inherit;
+}
+footer a:visited {
+  color: inherit;
+}
+footer a:hover {
+  color: white;
+}
+footer .inner {
+  padding: 2% 2% 4%;
+}
+footer .info {
+  padding: 5px 0 10px;
+}
+footer .info li {
+  list-style: none;
+  float: left;
+  margin: 5px 20px 0px 0;
+}
 #about h2,
-#about h3 {
-  text-align: center;
+#about h3,
+#about ul {
+  padding: 0 6%;
 }
-#about h2 {
-  margin: 50px 0;
-  font-size: 60px;
+#about img {
+  margin: 0 auto;
 }
-#about h3 {
-  font-size: 30px;
-  line-height: 50px;
-}
-#about p {
-  margin: 20px 100px;
-  font-size: 15px;
-  line-height: 30px;
+#about ul li {
+  margin: 0.5em 1em;
+  padding: 0;
 }
 ul.crew {
-  clear: both;
-  margin: 0 auto;
+  margin: 0 5%;
   overflow: hidden;
-}
-ul.crew li {
-  display: block;
-  float: left;
-  cursor: pointer;
-  margin: 0 0 20px 30px;
-}
-@media (min-width: 1200px) {
-  ul.crew li {
-    margin: 0 0 26.666666666666664px 40px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px)  {
-  ul.crew li {
-    margin: 0 0 15px 22.5px;
-  }
-}
-@media (max-width: 767px) {
-  ul.crew li {
-    margin: 0 0 13.333333333333332px 20px;
-  }
-}
-@media (max-width: 480px) {
-  ul.crew li {
-    margin: 0 0 10px 15px;
-  }
-}
-ul.crew li img,
-ul.crew li.recruit span {
-  display: block;
-  width: 88px;
-  height: 88px;
-  border-radius: 100%;
-}
-@media (min-width: 1200px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    width: 117.33333333333333px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px)  {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    width: 66px;
-  }
-}
-@media (max-width: 767px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    width: 58.666666666666664px;
-  }
-}
-@media (max-width: 480px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    width: 44px;
-  }
-}
-@media (min-width: 1200px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    height: 117.33333333333333px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px)  {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    height: 66px;
-  }
-}
-@media (max-width: 767px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    height: 58.666666666666664px;
-  }
-}
-@media (max-width: 480px) {
-  ul.crew li img,
-  ul.crew li.recruit span {
-    height: 44px;
-  }
-}
-ul.crew li.recruit span {
-  background: #e6eaee;
-  display: table-cell;
-  vertical-align: middle;
   text-align: center;
 }
-ul.crew li .detail {
-  display: none;
-}
-ul.crew li.first {
-  padding: 30px 30px 30px 30px;
-  border-radius: 10px;
-  background: #e6eaee;
+ul.crew li {
   overflow: hidden;
-  display: block;
-  float: none;
-  clear: both;
-}
-@media (min-width: 1200px) {
-  ul.crew li.first {
-    padding: 40px 40px 40px 40px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px)  {
-  ul.crew li.first {
-    padding: 22.5px 22.5px 22.5px 22.5px;
-  }
-}
-@media (max-width: 767px) {
-  ul.crew li.first {
-    padding: 20px 20px 20px 20px;
-  }
-}
-@media (max-width: 480px) {
-  ul.crew li.first {
-    padding: 15px 15px 15px 15px;
-  }
-}
-ul.crew li.first img {
-  width: 18%;
-  height: 18%;
-  border-radius: 100%;
-  float: left;
-}
-ul.crew li.first .detail {
-  display: table-cell;
-  float: left;
-  margin-left: 4%;
-  width: 78%;
-}
-ul.crew li.first .detail .comment {
-  background-color: #ffffff;
-  border-radius: 15px;
+  width: 135px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 20px 20px 0;
   position: relative;
-  padding: 5% 5%;
-  font-size: 15px;
 }
-ul.crew li.first .detail .comment:after {
-  right: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
+ul.crew li img {
+  border-radius: 15px;
+}
+ul.crew li em {
+  font-style: normal;
   position: absolute;
-  pointer-events: none;
-  border-color: rgba(255, 255, 255, 0);
-  border-right-color: #ffffff;
-  border-width: 10px;
-  top: 50%;
-  margin-top: -10px;
+  top: 10px;
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333333;
 }
-ul.crew li.first .detail strong,
-ul.crew li.first .detail em {
-  float: left;
+ul.crew li strong {
+  font-size: 14px;
+  line-height: 2em;
+  letter-spacing: 4px;
+  text-indent: 4px;
 }
-ul.crew li.first .detail div.urls {
-  float: right;
+ul.crew li p.comment {
+  background: #e5e5e5;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  position: relative;
 }
-#recruit {
+ul.crew li p.comment:after,
+ul.crew li p.comment:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+ul.crew li p.comment:after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #e5e5e5;
+}
+ul.crew li p.comment:before {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-bottom-color: #e5e5e5;
+}
+div#recruit {
   display: none;
   background: #e6eaee;
   position: relative;
-  margin-top: 20px;
-  padding: 40px;
+  margin: 20px;
+  padding: 20px;
   border-radius: 16px;
 }
-#recruit:after {
+div#recruit:after {
   bottom: 100%;
   border: solid transparent;
   content: " ";
@@ -297,25 +287,22 @@ ul.crew li.first .detail div.urls {
   left: 50%;
   margin-left: -20px;
 }
-#recruit h1 {
-  font-size: 25px;
-  margin-bottom: 20px;
+div#recruit h1 {
+  font-size: 20px !important;
+  margin: 0 0 20px 0;
+  text-align: center;
 }
-#recruit h2 {
+div#recruit h2 {
   font-size: 16px;
-  margin-bottom: 40px;
 }
-#recruit p {
-  font-size: 15px;
-  margin: 10px;
+div#recruit p {
+  font-size: 14px;
+  padding: 20px 0 0 0;
 }
-#recruit ul {
-  margin: 10px 40px;
-}
-#recruit ul li {
+div#recruit ul li {
+  margin-left: 20px;
   list-style-type: disc;
   font-size: 13px;
-  line-height: 20px;
 }
 #products h2 {
   font-size: 18px;
@@ -560,65 +547,4 @@ ul.crew li.first .detail div.urls {
 }
 #contact #map_image img {
   width: 100%;
-}
-footer {
-  background-color: #16202a;
-  -moz-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  color: #d7dadd;
-  font-size: 11px;
-}
-footer a {
-  color: inherit;
-}
-footer a:link {
-  color: inherit;
-}
-footer a:visited {
-  color: inherit;
-}
-footer a:hover {
-  color: white;
-}
-footer .inner {
-  padding: 2% 2% 4%;
-}
-footer .info {
-  padding: 5px 0 10px;
-}
-footer .info li {
-  list-style: none;
-  float: left;
-  margin: 5px 20px 0px 0;
-}
-a {
-  text-decoration: none;
-  color: #26303a;
-}
-li {
-  list-style: none;
-}
-body {
-  background-color: #e6eaee;
-  color: #26303a;
-}
-#contents {
-  margin: 0 auto;
-  background: #fff;
-  position: relative;
-}
-#contents > section {
-  position: relative;
-  overflow: hidden;
-  padding: 2%;
-  background-color: #f3f3f8;
-}
-#contents > section:nth-child(2n) {
-  background-color: white;
-}
-#contents > section h1 {
-  font-size: 30px;
-  margin-bottom: 3%;
-  text-transform: uppercase;
 }

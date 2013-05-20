@@ -1,0 +1,13 @@
+@charset "UTF-8";
+#about h2,
+#about h3,
+#about ul {
+  padding: 0 6%;
+}
+#about img {
+  margin: 0 auto;
+}
+#about ul li {
+  margin: 0.5em 1em;
+  padding: 0;
+}
