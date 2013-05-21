@@ -1,190 +1,81 @@
 @charset "UTF-8";
 
-#products h2 {
-  font-size: 18px;
-  margin: 50px 0;
-}
-
-#products ul {
-  margin: 0 auto;
-}
-
-#products li {
-  float: left;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+ul.achievements {
+  padding: 10px 0 20px 0;
   text-align: center;
-  margin: 0;
+  li {
+    margin: 20px 0px;
+    display: inline-block;
+    width: 200px;
+    padding-top: 140px;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &:nth-child(1) {
+      background-image: url("/static/images/home/products/global-downloads.svg");
+    }
+    &:nth-child(2) {
+      background-image: url("/static/images/home/products/daily-active-user.svg");
+    }
+    &:nth-child(3) {
+      background-image: url("/static/images/home/products/released-apps.svg");
+    }
+    &:nth-child(4) {
+      background-image: url("/static/images/home/products/top-grossing.svg");
+    }
+    strong {
+      font-size: 50px;
+      display: block;
+      font-family: "Helvetica Neue";
+      line-height: 50px;
+      margin: 10px 0 20px 0;
+      color: #000000;
+      sub {
+        font-size: 25px;
+        top: -1px;
+        margin-left: 5px;
+      }
+    }
+    line-height: 16px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #494949;
+    font-weight: 900;
+    font-size: 14px;
+  }
 }
 
-#products .achievements {
-  @total-width: 960;
-  @column-width: 205;
-  @columns: 4;
-
-  width: percentage((@column-width * @columns) / @total-width);
-  margin: 40px auto 75px;
-  text-transform: uppercase;
-
+ul.products {
+  text-align: center;
   li {
-    width: percentage(1 / @columns);
-
-    &:before {
-      content: "";
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    background: #ffffff;
+    display: inline-block;
+    padding: 20px 0;
+    margin: 0 10px 20px 10px;
+    strong {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #000000;
       display: block;
-      width: 75%;
-      height: 150px;
-      margin: 0 auto;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 22px;
+      height: 44px;
+      overflow: hidden;
     }
-
-    &:nth-child(1):before {
-      background-image: url("../images/home/products/global-downloads.svg");
-    }
-    &:nth-child(2):before {
-      background-image: url("../images/home/products/daily-active-user.svg");
-    }
-    &:nth-child(3):before {
-      background-image: url("../images/home/products/released-apps.svg");
-    }
-    &:nth-child(4):before {
-      background-image: url("../images/home/products/top-grossing.svg");
-    }
-  }
-
-  p {
-    margin: 20px;
-    line-height: 100%;
-    font-size: 15px;
-    color: #494949;
-  }
-
-  p:first-child {
-    margin: 20px 0;
-    height: 60px;
-    font-size: 58px;
-    color: black;
-    sub {
-      font-size: 50%;
-      vertical-align: baseline;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    p {
+    em {
+      display: block;
+      font-style: normal;
+      color: #494949;
       font-size: 12px;
     }
-
-    p:first-child {
-      font-size: 46px;
-    }
   }
 }
 
-#products .apps {
-  width: 100%;
 
-  li {
-    @total-width: 960;
-    @gutter: 24;
-    @columns: 5;
-    width: percentage((@total-width - (@gutter * (@columns - 1))) / @total-width / @columns);
-    margin: 0 percentage(@gutter / @total-width / 2);
-    background-color: white;
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 
-  .icon {
-    &, & img {
-      display: block;
-    }
-    img {
-      width: 100%;
-      height: auto;
-    }
-    width: 75%;
-    margin: 15% auto;
-  }
 
-  h2, .category {
-    margin: 15%;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    height: 50px;
-    font-size: 18px;
-  }
-
-  @media screen and (max-width: 767px) {
-    h2 {
-      font-size: 14px;
-    }
-
-    p {
-      font-size: 9px;
-    }
-  }
-}
-
-#products .more-apps {
-  @bgcolor: #26303a;
-  display: block;
-  width: 40%;
-  height: 64px;
-  line-height: 64px;
-  margin: 50px auto;
-  background-color: @bgcolor;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 9px;
-  &, &:link, &:active, &:hover, &:visited {
-    color: #ffffff;
-  }
-  transition: background-color 200ms ease;
-  &:hover {
-    background-color: lighten(@bgcolor, 10%);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #products li {
-    float: none;
-    width: auto;
-    height: auto;
-    text-align: left;
-    margin: 0;
-    padding: 12px 0;
-  }
-
-  #products .icon, #products .icon img {
-    width: 60px;
-    height: 60px;
-    margin: 0;
-  }
-
-  #products h2 {
-    margin: 4px 0 8px;
-    height: auto;
-    font-size: 180%;
-  }
-
-  #products .icon {
-    float: left;
-  }
-
-  #products .icon ~ * {
-    margin-left: 80px;
-  }
-}

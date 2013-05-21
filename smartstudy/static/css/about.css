@@ -2,12 +2,16 @@
 #about h2,
 #about h3,
 #about ul {
-  padding: 0 6%;
+  padding: 0 6% !important;
 }
 #about img {
+  display: block;
   margin: 0 auto;
 }
 #about ul li {
-  margin: 0.5em 1em;
+  margin: 0.5em 0.5em;
   padding: 0;
+}
+#about h3 {
+  font-size: 1.4em;
 }

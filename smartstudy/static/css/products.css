@@ -1,0 +1,74 @@
+@charset "UTF-8";
+ul.achievements {
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+ul.achievements li {
+  margin: 20px 0px;
+  display: inline-block;
+  width: 200px;
+  padding-top: 140px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  line-height: 16px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #494949;
+  font-weight: 900;
+  font-size: 14px;
+}
+ul.achievements li:nth-child(1) {
+  background-image: url("/static/images/home/products/global-downloads.svg");
+}
+ul.achievements li:nth-child(2) {
+  background-image: url("/static/images/home/products/daily-active-user.svg");
+}
+ul.achievements li:nth-child(3) {
+  background-image: url("/static/images/home/products/released-apps.svg");
+}
+ul.achievements li:nth-child(4) {
+  background-image: url("/static/images/home/products/top-grossing.svg");
+}
+ul.achievements li strong {
+  font-size: 50px;
+  display: block;
+  font-family: "Helvetica Neue";
+  line-height: 50px;
+  margin: 10px 0 20px 0;
+  color: #000000;
+}
+ul.achievements li strong sub {
+  font-size: 25px;
+  top: -1px;
+  margin-left: 5px;
+}
+ul.products {
+  text-align: center;
+}
+ul.products li {
+  text-transform: uppercase;
+  width: 160px;
+  text-align: center;
+  background: #ffffff;
+  display: inline-block;
+  padding: 20px 0;
+  margin: 0 10px 20px 10px;
+}
+ul.products li strong {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+  display: block;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 22px;
+  height: 44px;
+  overflow: hidden;
+}
+ul.products li em {
+  display: block;
+  font-style: normal;
+  color: #494949;
+  font-size: 12px;
+}

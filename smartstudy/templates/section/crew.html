@@ -2,30 +2,30 @@
 
 <ul class="crew">{% for item in crew %}
     <li class="crew">
-        <div class="detail">
-            <img src="{{ item.picture.url }}" />
-            <strong>{{ item.name }}</strong>
-            <em>{{ item.nick }}</em>
-            <div class="urls">
-                {% if item.email %}
-                <a class="icon email" href="{{ item.email }}">email</a>
-                {% endif %}
-                {% if item.home %}
-                <a class="icon home" href="{{ item.home }}">home</a>
-                {% endif %}
-                {% if item.facebook %}
-                <a class="icon facebook" href="{{ item.facebook }}">facebook</a>
-                {% endif %}
-                {% if item.twitter %}
-                <a class="icon twitter" href="{{ item.twitter }}">twitter</a>
-                {% endif %}
-            </div>
-            <p class="comment">{{ item.comment }}</p>
+        <img src="{{ item.picture.url }}" alt="{{ item.name }} / {{ item.nick }}"/>
+        <strong>{{ item.name }}</strong>
+        <em>{{ item.nick }}</em>
+
+        <div class="urls">
+            {% if item.email %}
+            <a class="icon email" href="{{ item.email }}">email</a>
+            {% endif %}
+            {% if item.home %}
+            <a class="icon home" href="{{ item.home }}">home</a>
+            {% endif %}
+            {% if item.facebook %}
+            <a class="icon facebook" href="{{ item.facebook }}">facebook</a>
+            {% endif %}
+            {% if item.twitter %}
+            <a class="icon twitter" href="{{ item.twitter }}">twitter</a>
+            {% endif %}
         </div>
+        <p class="comment">{{ item.comment }}</p>
     </li>
     {% endfor %}
     <li class="recruit">
         <span>HEY, YOU!</span>
+        <p class="comment">Click!</p>
     </li>
 </ul>
 

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .navbar {
   z-index: 1000;
-  overflow: hidden;
   background: #fff;
   margin-bottom: 0;
   background: #fff;
@@ -49,53 +48,47 @@
         -moz-box-shadow: none;
         box-shadow: none;
       }
+
     }
+
+  }
+  button {
+    display: none;
   }
 }
 
-nav.main {
-  background: #fff;
-  z-index: 1000;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
-  opacity: 0.9;
-  width: 100%;
-  background: #fff;
-
-  ul {
-    li.brand {
-      a {
+@media @mq_middle {
+  .navbar {
+    .brand {
+      width: 60px;
+      height: 30px;
+    }
+    .nav {
+      overflow: visible;
+      background: #1c2447;
+      position: absolute;
+      li {
         display: block;
-        width: 20%;
-        height: 60px;
-        background: url(../images/home/smartstudy_logo.png) center center no-repeat;
-        background-size: auto 90%;
-        @media (max-width: 480px) {
-          width: 20%;
-          height: 30px;
-          background: url(../images/home/smartstudy_logo_mini.png) center center no-repeat;
-          background-size: auto 90%;
+        float: none;
+        z-index: 2000;
+        line-height: 30px;
+        a {
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          color: #fff;
+          font-size: 15px;
+
+        }
+        &.active {
+          background: #1c2447;
         }
       }
+      display:none;
     }
-
-    li {
-      float: left;
-      width: 15%;
-      padding: 0 2.5%;
-      text-align: center;
-      line-height: 60px;
-      font-size: 1.125em;
-      a {
-        color: #d7dadd;
-        font-weight: bold;
-        display: block;
-        font-family: Helvetica Neue;
-      }
-      &.active a {
-        color: #1c2447;
-        transition: color 500ms ease;
-      }
+    button {
+      display: block;
     }
   }
-}
 
+}

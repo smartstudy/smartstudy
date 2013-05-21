@@ -17,4 +17,13 @@ $(function () {
 
     $(window).scroll(fixedNavigation);
     $navbar.scrollspy();
+    $('.navbar button').click(function () {
+        $('.navbar .nav').slideToggle(500);
+    });
+    if ($('.navbar button').is(":visible")) {
+        $('.navbar .nav a').click(function () {
+            $('.navbar .nav').hide();
+        });
+    }
+
 });

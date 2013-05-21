@@ -3,37 +3,31 @@
 <h2>Our achievements since 2010!</h2>
 <ul class="achievements">
     <li>
-        <p>18<sub>million</sub></p>
-
-        <p>Global<br/>downloads</p>
+        <strong>18<sub>million</sub></strong>
+        Global <br/>downloads
     </li>
     <li>
-        <p>550,000</p>
-
-        <p>Daily<br/> active user</p>
+        <strong>550,000</strong>
+        Daily <br/>active user
     </li>
     <li>
-        <p>300</p>
-
-        <p>Apps<br/> released</p>
+        <strong>300</strong>
+        Apps<br/> released
     </li>
     <li>
-        <p>1<sub>st</sub></p>
-
-        <p>Top grossing<br/>in 75 countries</p>
+        <strong>1<sub>st</sub></strong>
+        Top grossing <br/>in 75 countries
     </li>
 </ul>
 
-<ul class="apps">
+<ul class="products">
     {% for product in products %}
     <li>
         <a class="icon" href="{{ product.store_url }}">
             <img src="{{ product.icon }}" width="120" height="120" alt="{{ product.name }}"/>
+            <strong>{{ product.name }}</strong>
+            <em class="category">{{ product.category }}</em>
         </a>
-
-        <h2>{{ product.name }}</h2>
-
-        <p class="category">{{ product.category }}</p>
     </li>
     {% endfor %}
 </ul>

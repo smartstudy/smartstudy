@@ -1,5 +1,5 @@
-NameError: .arrow is undefined in /Users/py/Documents/github/smartstudy/smartstudy/static/less/crew.less:37:6
-36       font-size: 13px;
-37       .arrow(5px, #e5e5e5, top, 50%, 0px,#e5e5e5);
-38     }
+NameError: .arrow is undefined in /Users/py/Documents/github/smartstudy/smartstudy/static/less/crew.less:49:6
+48       box-shadow: 0px -1px 1px #bbbbbb;
+49       .arrow(5px, #e5e5e5, top, 50%, 1px,#bbbbbb);
+50     }
 
