@@ -148,7 +148,7 @@ header p {
 }
 @media (max-width: 767px) {
   .navbar .brand {
-    width: 60px;
+    width: 180px;
     height: 30px;
   }
   .navbar .nav {

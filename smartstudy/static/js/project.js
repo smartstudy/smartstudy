@@ -17,13 +17,16 @@ $(function () {
 
     $(window).scroll(fixedNavigation);
     $navbar.scrollspy();
+    var btn_flag = true;
     $('.navbar button').click(function () {
+        var $btn = $(this);
+        if (btn_flag) {
+            $btn.text('-');
+            btn_flag = false;
+        } else {
+            $btn.text('+');
+            btn_flag = true;
+        }
         $('.navbar .nav').slideToggle(500);
     });
-    if ($('.navbar button').is(":visible")) {
-        $('.navbar .nav a').click(function () {
-            $('.navbar .nav').hide();
-        });
-    }
-
 });
